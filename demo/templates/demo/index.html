@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+</head>
+<body>
+    <form>
+        <label for="province_list">请选择一个省份:</label>
+        <select id="province_list" name="province">
+            {% for province in Provinces %}
+                <option value="{{ province.id }}">{{ province.Provinces }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    <form>
+        <label for="city_list">请选择一个城市:</label>
+        <select id="city_list" name="city">
+            {% for city in Cities %}
+                <option value="{{ city.id }}">{{city.City }}</option>
+            {% endfor %}
+        </select>
+    </form>
+</body>
+</html>
