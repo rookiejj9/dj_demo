@@ -17,5 +17,5 @@ class IndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['Cities'] = CityList.objects.order_by('id')
+        context['Cities'] = CityList.objects.filter(Province_id = 2)
         return context
