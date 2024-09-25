@@ -1,7 +1,5 @@
-
 from django.views import generic
 from .models import ProvinceList,CityList
-
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -17,5 +15,5 @@ class IndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['Cities'] = CityList.objects.filter(Province_id = 2)
+        context['Cities'] = CityList.objects.filter(Province_id = 1)
         return context
